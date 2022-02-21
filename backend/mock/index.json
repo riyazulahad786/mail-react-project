@@ -1,0 +1,64 @@
+{
+    "profile": {
+      "name": "Sasha Gray",
+      "avatarUrl": "https://randomuser.me/api/portraits/women/33.jpg",
+      "email": "demouser@macrosoft.com"
+    },
+    "folders": [
+      {
+        "id": 1,
+        "titile": "Inbox"
+      },
+      {
+        "id": 2,
+        "titile": "Sent"
+      },
+      {
+        "id": 3,
+        "titile": "Flagged"
+      },
+      {
+        "id": 4,
+        "titile": "Drafts"
+      },
+      {
+        "id": 5,
+        "titile": "Spam"
+      }
+    ],
+    "emails": [
+      {
+        "id": 1,
+        "title": "Proin at turpis a pede posuere nonummy.",
+        "body": "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
+        "subject": "Pellentesque viverra pede ac diam.",
+        "to": "edufton0@ebay.com",
+        "folderId": 2
+      },
+      {
+        "id": 2,
+        "title": "Duis consequat dui nec nisi volutpat eleifend.",
+        "body": "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.\n\nMaecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
+        "subject": "Morbi quis tortor id nulla ultrices aliquet.",
+        "to": "acroix1@sogou.com",
+        "folderId": 3
+      },
+      {
+        "id": 3,
+        "title": "Duis bibendum.",
+        "body": "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
+        "subject": "Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
+        "to": "smatiashvili2@rakuten.co.jp",
+        "folderId": 1
+      },
+      {
+        "id": 4,
+        "title": "Nullam porttitor lacus at turpis.",
+        "body": "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\n\nProin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.\n\nAenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
+        "subject": "Integer ac leo.",
+        "to": "nlepoidevin3@livejournal.com",
+        "folderId": 3
+      }
+    ]
+}
+      
