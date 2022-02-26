@@ -1,38 +1,51 @@
-var express = require('express');
-var cors = require('cors')
-var bodyParser = require('body-parser')
+const express = require("express");
+const bodyParser = require("body-parser");
+const nodemailer = require("nodemailer");
 
-var app = express();
+const app = express();
 
-app.use(cors())
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
-// parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }))
-
-// parse application/json
-app.use(bodyParser.json())
-
-app.post('/login', (req, res) => {
-    console.log(req.body)
-    let body = req.body;
-    if (body.username == "demouser@macrosoft.com" && body.password == "Test_1234") {
-        res.status(200).send({
-            error: null,
-            message: null,
-            token: "hfjhfg2h3jf423f4hj3f24g234v23jhf4j23fbu4jf23j423jf4hj23b4jnfdsf8td7s8fnt8dsfmsdf"
-        })
-    } else {
-        res.status(401).send({
-            error: 401,
-            message: "Not authorized"
-        });
+app.post("/api/form", (req, res) => {
+  console.log(req.body);
+  //Formating content to be send
+  var emailcontent = `<h3> Contact Details</h3>
+                     <ul>
+                      <li>name: ${req.body.name}</li>
+                      <li>email : ${req.body.email}</li>
+                     </ul>
+                     <h2>Message</h2>
+                      <p>message: ${req.body.subject}</p>
+                          `;
+  var transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: "emailerdinesh@gmail.com",
+      pass: "07March1991bro"
+    },
+    tls: {
+      rejectUnauthorized: false
     }
-
+  });
+  //mailoption object
+  var mailOptions = {
+    from: "riyazulahad786@gmail.com",
+    to: "syedriyaz598@gmail.com",
+    subject: "New Message",
+    text: req.body.subject,
+    html: emailcontent
+  };
+  //Sending email using transporter function
+  transporter.sendMail(mailOptions, function(error, info) {
+    if (error) {
+      console.log(error);
+    } else {
+      console.log("Email sent: " + info.response);
+    }
+  });
 });
-
-var server = app.listen(8081, function () {
-    var host = server.address().address;
-    var port = server.address().port;
-
-    console.log('Login app is listening at http://%s:%s', host, port);
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
+  console.log(`server listening on port ${PORT}`);
 });
